@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Luana3333333/BugCatalogue
   branch: main
 
 media_folder: "images/uploads"
