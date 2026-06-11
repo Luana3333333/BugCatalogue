@@ -6,31 +6,14 @@ function parseFrontmatter(text) {
   lines.forEach(line => {
     const parts = line.split(':')
     const key = parts[0].trim()
-const value = parts.slice(1).join(':').trim()
+    const value = parts.slice(1).join(':').trim()
     data[key] = value
   })
   
   return data
 }
 
-fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
-  .then(response => response.json())
-  .then(files => {
-    files.forEach(file => {
-      fetch(file.download_url)
-        .then(response => response.text())
-        .then(content => {
-          const data = parseFrontmatter(content)
-          console.log(data)
-        })
-    })
-    .then(content => {
-  const data = parseFrontmatter(content)
-  createKaeferKarte(data)
-})
-  })
-
-  function createKaeferKarte(data) {
+function createKaeferKarte(data) {
   const karte = document.createElement('div')
   karte.classList.add('kaefer-karte')
   
@@ -41,3 +24,16 @@ fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
   
   document.querySelector('.kaefer-grid').appendChild(karte)
 }
+
+fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
+  .then(response => response.json())
+  .then(files => {
+    files.forEach(file => {
+      fetch(file.download_url)
+        .then(response => response.text())
+        .then(content => {
+          const data = parseFrontmatter(content)
+          createKaeferKarte(data)
+        })
+    })
+  })
