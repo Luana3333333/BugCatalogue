@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "kaefer"
+    label: "Käfer"
+    folder: "_kaefer"
+    create: true
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Familie", name: "familie", widget: "string" }
+      - { label: "Beschreibung", name: "beschreibung", widget: "text" }
+      - { label: "Bild", name: "bild", widget: "image" }
