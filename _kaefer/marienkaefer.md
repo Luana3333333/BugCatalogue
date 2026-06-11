@@ -2,6 +2,6 @@
 title: Marienkäfer
 familie: Käfer
 beschreibung: Marienkäfer
-bild: https://www.bund.net/fileadmin/_processed_/c/c/csm-marienkaefer-tipp-august-2017-723ee4300b.jpg
-kategorie: Harte Käfer
+bild: https://insektentrainer.nabu.de/wp-content/uploads/sites/2/2019/07/3a_SiebenpunktMarienka%CC%88fer_Doppelga%CC%88nger.png
+kategorie: Gepanzerte Käfer
 ---
