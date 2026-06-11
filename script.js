@@ -46,6 +46,7 @@ fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
 
 function zeigeKategorien(kaefer) {
   const kategorien = ['Geflügelte Käfer', 'Gepanzerte Käfer', 'Rüsselkäfer']
+  console.log(kaefer)
   const main = document.querySelector('main')
 
   kategorien.forEach(kategorie => {
