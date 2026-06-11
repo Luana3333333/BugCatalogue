@@ -36,7 +36,7 @@ fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
         .then(content => {
           const data = parseFrontmatter(content)
           alleKaefer.push(data)
-
+console.log(alleKaefer.length, files.length)
           if (alleKaefer.length === files.length) {
             zeigeKategorien(alleKaefer)
           }
