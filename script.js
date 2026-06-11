@@ -24,6 +24,10 @@ fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
           console.log(data)
         })
     })
+    .then(content => {
+  const data = parseFrontmatter(content)
+  createKaeferKarte(data)
+})
   })
 
   function createKaeferKarte(data) {
