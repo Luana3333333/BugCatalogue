@@ -25,3 +25,15 @@ fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
         })
     })
   })
+
+  function createKaeferKarte(data) {
+  const karte = document.createElement('div')
+  karte.classList.add('kaefer-karte')
+  
+  karte.innerHTML = `
+    <img src="${data.bild}" alt="${data.title}">
+    <p>${data.title}</p>
+  `
+  
+  document.querySelector('.kaefer-grid').appendChild(karte)
+}
