@@ -6,7 +6,7 @@ function parseFrontmatter(text) {
   lines.forEach(line => {
     const parts = line.split(':')
     const key = parts[0].trim()
-    const value = parts[1].trim()
+const value = parts.slice(1).join(':').trim()
     data[key] = value
   })
   
