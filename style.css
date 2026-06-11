@@ -24,3 +24,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
+
+h2 {
+  font-family: 'Hanalei Fill', system-ui;
+}

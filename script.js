@@ -22,18 +22,47 @@ function createKaeferKarte(data) {
     <p>${data.title}</p>
   `
   
-  document.querySelector('.kaefer-grid').appendChild(karte)
+  return karte
 }
 
 fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
   .then(response => response.json())
   .then(files => {
+    const alleKaefer = []
+
     files.forEach(file => {
       fetch(file.download_url)
         .then(response => response.text())
         .then(content => {
           const data = parseFrontmatter(content)
-          createKaeferKarte(data)
+          alleKaefer.push(data)
+
+          if (alleKaefer.length === files.length) {
+            zeigeKategorien(alleKaefer)
+          }
         })
     })
   })
+
+function zeigeKategorien(kaefer) {
+  const kategorien = ['Fliegende Käfer', 'Harte Käfer', 'Weiche Käfer']
+  const main = document.querySelector('main')
+
+  kategorien.forEach(kategorie => {
+    const gruppe = kaefer.filter(k => k.kategorie === kategorie)
+    
+    if (gruppe.length === 0) return
+
+    const titel = document.createElement('h2')
+    titel.textContent = kategorie
+    main.appendChild(titel)
+
+    const grid = document.createElement('div')
+    grid.classList.add('kaefer-grid')
+    main.appendChild(grid)
+
+    gruppe.forEach(k => {
+      grid.appendChild(createKaeferKarte(k))
+    })
+  })
+}
