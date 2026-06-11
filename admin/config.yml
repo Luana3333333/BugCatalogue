@@ -18,5 +18,5 @@ collections:
           label: "Kategorie",
           name: "kategorie",
           widget: "select",
-          options: ["Fliegende Käfer", "Harte Käfer", "Weiche Käfer"],
+          options: ["Geflügelte Käfer", "Gepanzerte Käfer", "Rüsselkäfer"],
         }
