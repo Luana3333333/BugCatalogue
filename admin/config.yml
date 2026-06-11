@@ -14,3 +14,9 @@ collections:
       - { label: "Familie", name: "familie", widget: "string" }
       - { label: "Beschreibung", name: "beschreibung", widget: "text" }
       - { label: "Bild", name: "bild", widget: "image" }
+      - {
+          label: "Kategorie",
+          name: "kategorie",
+          widget: "select",
+          options: ["Fliegende Käfer", "Harte Käfer", "Weiche Käfer"],
+        }
