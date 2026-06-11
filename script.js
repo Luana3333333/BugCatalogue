@@ -25,29 +25,9 @@ function createKaeferKarte(data) {
   return karte
 }
 
-fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
-  .then(response => response.json())
-  .then(files => {
-    console.log(files
-    const alleKaefer = []
-
-    files.forEach(file => {
-      fetch(file.download_url)
-        .then(response => response.text())
-        .then(content => {
-          const data = parseFrontmatter(content)
-          alleKaefer.push(data)
-console.log(alleKaefer.length, files.length)
-          if (alleKaefer.length === files.length) {
-            zeigeKategorien(alleKaefer)
-          }
-        })
-    })
-  })
-
 function zeigeKategorien(kaefer) {
-  const kategorien = ['Geflügelte Käfer', 'Gepanzerte Käfer', 'Rüsselkäfer']
-  console.log(kaefer)
+  console.log('zeigeKategorien aufgerufen', kaefer)
+  const kategorien = ['Gepanzerte Käfer', 'Geflügelte Käfer', 'Rüsselkäfer']
   const main = document.querySelector('main')
 
   kategorien.forEach(kategorie => {
@@ -56,6 +36,7 @@ function zeigeKategorien(kaefer) {
     if (gruppe.length === 0) return
 
     const titel = document.createElement('h2')
+    titel.classList.add('kategorie-titel')
     titel.textContent = kategorie
     main.appendChild(titel)
 
@@ -68,3 +49,24 @@ function zeigeKategorien(kaefer) {
     })
   })
 }
+
+fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
+  .then(response => response.json())
+  .then(files => {
+    console.log('Dateien gefunden:', files)
+    const alleKaefer = []
+
+    files.forEach(file => {
+      fetch(file.download_url)
+        .then(response => response.text())
+        .then(content => {
+          const data = parseFrontmatter(content)
+          alleKaefer.push(data)
+          console.log('Käfer geladen:', alleKaefer.length, 'von', files.length)
+
+          if (alleKaefer.length === files.length) {
+            zeigeKategorien(alleKaefer)
+          }
+        })
+    })
+  })
