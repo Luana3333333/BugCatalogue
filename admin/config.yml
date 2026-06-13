@@ -2,9 +2,6 @@ backend:
   name: github
   repo: Luana3333333/BugCatalogue
   branch: main
-  auth_type: implicit
-  base_url: https://api.netlify.com
-auth_endpoint: https://api.netlify.com
 
 media_folder: "images/uploads"
 
