@@ -1,18 +1,22 @@
 body {
   background: white;
+  padding: 0 24px;
 }
 
 main {
   background: transparent;
-  padding: 0 24px;
 }
 
 
-h1 {
+header {
   font-family: 'Hanalei Fill', system-ui;
-  font-size: 48px;
+  font-size: 60px;
   color: transparent;
   -webkit-text-stroke: 2px rgb(32, 93, 78);
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
 }
 
 h2 {
