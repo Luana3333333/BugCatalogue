@@ -20,12 +20,16 @@ fetch(`https://raw.githubusercontent.com/Luana3333333/BugCatalogue/main/_kaefer/
   .then(response => response.text())
   .then(content => {
     const data = parseFrontmatter(content)
+    
+    document.querySelector('header').innerHTML = `
+      <h1>${data.title}</h1>
+      <img src="${data.bild}" alt="${data.title}" class="header-bild">
+    `
+    
     document.querySelector('#kaefer-detail').innerHTML = `
-      <h2>${data.title}</h2>
-      <img src="${data.bild}" alt="${data.title}" style="max-width: 400px;">
       ${data.detailbild ? `
         <figure>
-          <img src="${data.detailbild}" alt="${data.bildbeschreibung || data.title}" style="max-width: 400px;">
+          <img src="${data.detailbild}" alt="${data.bildbeschreibung || data.title}">
           <figcaption>${data.bildbeschreibung || ''}</figcaption>
         </figure>
       ` : ''}
