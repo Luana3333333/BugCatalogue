@@ -23,11 +23,8 @@ header {
 }
 
 header h1 {
-  font-size: 60px !important;
-  margin: 0;
-  color: rgb(163, 198, 87) !important;
-  -webkit-text-stroke: 2px rgb(0, 0, 0) !important;
-  font-family: 'Racing Sans One', sans-serif !important;
+  font-size: 60px;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
 h2 {
@@ -95,14 +92,36 @@ p {
 
 }
 
-#kaefer-detail figure img {
-  width: 100%;
-  max-width: none;
+.header-bild {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
+#kaefer-detail figcaption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: rgb(104, 104, 104);
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
 
-.header-bild {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
+#kaefer-detail p {
+  font-size: 20px;
+}
+
+#kaefer-detail figure {
+  margin: 0;
+  display: block;
+}
+
+#kaefer-detail figure img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.familie {
+  margin-top: 50px;
 }
