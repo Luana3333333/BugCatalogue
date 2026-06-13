@@ -6,9 +6,10 @@
 }
 
 .kaefer-karte {
-  background-color: #f5e6c8;
+  background-color: #E7FF9E;
   padding: 8px;
   text-align: center;
+  outline: 2px solid rgb(105, 136, 31);
 }
 
 .kaefer-karte img {
@@ -19,6 +20,8 @@
 
 h1 {
   font-family: 'Hanalei Fill', system-ui;
+  font-size: 48px;
+  color: black;
 }
 
 .hanalei-fill-regular {
@@ -29,6 +32,14 @@ h1 {
 
 h2 {
   font-family: 'Hanalei Fill', system-ui;
+  color: black;
+  font-size: 36px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 30px;
 }
 
 .kaefer-karte p {
@@ -38,9 +49,15 @@ h2 {
 }
 
 body {
-  background: red !important;
+  background: white;
 }
 
 main {
-  background: transparent !important;
+  background: transparent;
+}
+
+h3 {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
 }

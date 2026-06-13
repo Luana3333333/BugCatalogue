@@ -18,8 +18,10 @@ function createKaeferKarte(data) {
   karte.classList.add('kaefer-karte')
   
   karte.innerHTML = `
-    <img src="${data.bild}" alt="${data.title}">
-    <p>${data.title}</p>
+    <a href="kaefer.html?id=${data.id}">
+      <img src="${data.bild}" alt="${data.title}">
+      <p>${data.title}</p>
+    </a>
   `
   
   return karte
@@ -61,6 +63,7 @@ fetch('https://api.github.com/repos/Luana3333333/BugCatalogue/contents/_kaefer')
         .then(response => response.text())
         .then(content => {
           const data = parseFrontmatter(content)
+          data.id = file.name.replace('.md', '')
           alleKaefer.push(data)
           console.log('Käfer geladen:', alleKaefer.length, 'von', files.length)
 
