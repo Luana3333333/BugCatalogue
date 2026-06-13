@@ -89,7 +89,11 @@ p {
   display: inline-block;
   margin-top: 36px;
   font-size: 24px;
+}
 
+.zurueck-link:hover {
+  background-color: rgb(163, 198, 87);
+  color: white;
 }
 
 .header-bild {
@@ -129,5 +133,4 @@ p {
 .fliegender-kaefer {
   width: 200px;
   height: 200px;
-  object-fit: contain;
 }

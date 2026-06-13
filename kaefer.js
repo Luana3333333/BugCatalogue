@@ -23,7 +23,10 @@ fetch(`https://raw.githubusercontent.com/Luana3333333/BugCatalogue/main/_kaefer/
     
     document.querySelector('header').innerHTML = `
       <h1>${data.title}</h1>
-      <img src="${data.bild}" alt="${data.title}" class="header-bild" style="cursor: pointer;" onclick="window.location.href='flybonus/fly.html'">
+  <div onclick="window.location.href='flybonus/fly.html'" style="cursor: pointer; text-align: center;">
+    <img src="${data.bild}" alt="${data.title}" class="header-bild">
+    <p style="font-family: 'Roboto', sans-serif; font-size: 12px; margin: 0; -webkit-text-stroke: 0; color: black;">click me</p>
+  </div>
     `
     
     document.querySelector('#kaefer-detail').innerHTML = `
