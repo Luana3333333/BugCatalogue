@@ -16,6 +16,12 @@ collections:
       - { label: "Beschreibung", name: "beschreibung", widget: "text" }
       - { label: "Bild", name: "bild", widget: "image" }
       - {
+          label: "Detailbild",
+          name: "detailbild",
+          widget: "image",
+          required: false,
+        }
+      - {
           label: "Kategorie",
           name: "kategorie",
           widget: "select",
