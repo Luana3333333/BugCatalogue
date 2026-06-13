@@ -22,6 +22,12 @@ collections:
           required: false,
         }
       - {
+          label: "Bildbeschreibung",
+          name: "bildbeschreibung",
+          widget: "string",
+          required: false,
+        }
+      - {
           label: "Kategorie",
           name: "kategorie",
           widget: "select",

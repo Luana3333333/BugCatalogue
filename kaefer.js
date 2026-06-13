@@ -23,6 +23,12 @@ fetch(`https://raw.githubusercontent.com/Luana3333333/BugCatalogue/main/_kaefer/
     document.querySelector('#kaefer-detail').innerHTML = `
       <h2>${data.title}</h2>
       <img src="${data.bild}" alt="${data.title}" style="max-width: 400px;">
+      ${data.detailbild ? `
+        <figure>
+          <img src="${data.detailbild}" alt="${data.bildbeschreibung || data.title}" style="max-width: 400px;">
+          <figcaption>${data.bildbeschreibung || ''}</figcaption>
+        </figure>
+      ` : ''}
       <p><strong>Familie:</strong> ${data.familie}</p>
       <p><strong>Kategorie:</strong> ${data.kategorie}</p>
       <p>${data.beschreibung}</p>
