@@ -23,7 +23,7 @@ fetch(`https://raw.githubusercontent.com/Luana3333333/BugCatalogue/main/_kaefer/
     
     document.querySelector('header').innerHTML = `
       <h1>${data.title}</h1>
-      <img src="${data.bild}" alt="${data.title}" class="header-bild">
+      <img src="${data.bild}" alt="${data.title}" class="header-bild" style="cursor: pointer;" onclick="window.location.href='flybonus/fly.html'">
     `
     
     document.querySelector('#kaefer-detail').innerHTML = `

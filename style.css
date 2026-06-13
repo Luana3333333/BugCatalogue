@@ -125,3 +125,9 @@ p {
 .familie {
   margin-top: 50px;
 }
+
+.fliegender-kaefer {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
