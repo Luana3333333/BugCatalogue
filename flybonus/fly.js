@@ -32,8 +32,7 @@ function createFliegenderKaefer(data) {
   img.alt = data.title
   img.classList.add('fliegender-kaefer')
   img.title = data.title
-  img.style.width = '100px'
-img.style.height = '100px'
+  
 
   // Startposition zufällig
   let x = Math.random() * (window.innerWidth - 80)
